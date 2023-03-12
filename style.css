@@ -22,6 +22,8 @@ body {
     height: 32px;
     background-color: #ff3838;
     transform: translate(-50%, -50%) rotate(45deg);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    animation: heartbeat 1.4s linear infinite;
 }
 
 .heart::before {
@@ -46,4 +48,31 @@ body {
     background-color: #ff3838;
     transform: translateX(-50%);
     border-radius: 50%;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    30% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1.4);
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    }
+    70% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1.4);
+        box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    }
 }
