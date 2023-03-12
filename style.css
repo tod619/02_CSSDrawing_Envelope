@@ -16,3 +16,34 @@ body {
     border-left: 170px solid #eee;
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.4);
 }
+
+.heart {
+    width: 32px;
+    height: 32px;
+    background-color: #ff3838;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.heart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3838;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.heart::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3838;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
